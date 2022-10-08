@@ -23,6 +23,10 @@
     src: url(../fonts/Roboto/Roboto-LightItalic.ttf) format("truetype");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -39,13 +43,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+    background-color: #1F2937;
+    padding: 0px 15%;
+}
+
+.header-logo>img {
+    width: auto;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .header-logo {
+    display: flex;
+    align-items: center;
     font-size: 24px;
     color: #F9FAF8;
     font-family: "Roboto Bold", sans-serif;
-    margin-top: 10px;
+    text-decoration: none;
 }
 
 .header-links {
@@ -53,12 +70,15 @@ body {
     list-style-type: none;
     font-family: "Roboto Regular", sans-serif;
     font-size: 18px;
-    color: #E5E7EB;
-    margin-top: 10px;
 }
 
 .header-links>li {
     padding: 13px 0 13px 26px;
+}
+
+.header-links>li>a {
+    color: #E5E7EB;
+    text-decoration: none;
 }
 
 .hero {
@@ -89,13 +109,13 @@ body {
     background-color: #3882f6;
     border-radius: 7px;
     color: white;
-    width: 100px;
-    height: 30px;
+    width: 140px;
+    height: 35px;
     font-family: "Roboto Regular", sans-serif;
     border: 0;
 }
 
-.info {
+#info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,13 +141,15 @@ body {
 
 .info-figures>figure>img {
     border-radius: 12px;
+    width: 175px;
+    height: 175px;
 }
 
 figcaption {
     font-family: "Roboto Regular", sans-serif;
 }
 
-.quote {
+#quote {
     background-color: #E5E7EB;
 }
 
@@ -151,7 +173,7 @@ figcaption {
     margin: 0;
 }
 
-.cta {
+#cta {
     display: flex;
     background-color: #3882f6;
     margin: 5% 15%;
